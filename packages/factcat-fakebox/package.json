@@ -1,0 +1,15 @@
+{
+  "name": "factcat-fakebox",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ravern Koh",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "osmosis": "^1.1.7"
+  }
+}
