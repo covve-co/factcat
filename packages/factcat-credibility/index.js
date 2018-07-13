@@ -3,7 +3,7 @@ var osmosis = require('osmosis');
 let reputableDomain = new RegExp('(www.|https:\/\/).*([^\.]+)(.gov.sg|.edu.sg)');
 let reputableSource = new RegExp("(https?:\/\/(.+?\.)?(straitstimes|tnp|todayonline|businesstimes|zaobao|beritaharian|channelnewsasia|theindependent)\.(com|sg)(\/*)?)");
 
-module.exports = async (link) => {
+module.exports = (link) => {
     console.log(`🔎 Forming graph for link ${link}`);
     // Verifies if govt 
     if (link.match(reputableDomain)) {

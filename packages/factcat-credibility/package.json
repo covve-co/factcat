@@ -6,7 +6,5 @@
   "scripts": {},
   "author": "Sean Lim",
   "license": "ISC",
-  "dependencies": {
-    "osmosis": "^1.1.7"
-  }
+  "dependencies": {}
 }
