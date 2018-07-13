@@ -39,7 +39,10 @@ function process(post) {
 // Blocks a post.
 function block(post) {
     const root = post.raw.parentNode.parentNode.parentNode;
+
+    post.original = root.innerHTML;
     root.innerHTML = `<div id="${post.id}">BOOM</div>`;
+
     blubber.create(post);
 }
 
