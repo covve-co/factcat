@@ -1,0 +1,15 @@
+{
+  "name": "factcat-language",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ravern Koh",
+  "license": "ISC",
+  "dependencies": {
+    "osmosis": "^1.1.7",
+    "sentiment": "^5.0.1"
+  }
+}
