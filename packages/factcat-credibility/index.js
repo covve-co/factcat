@@ -1,5 +1,3 @@
-var osmosis = require('osmosis');
-
 let reputableDomain = new RegExp('(www.|https:\/\/).*([^\.]+)(.gov.sg|.edu.sg)');
 let reputableSource = new RegExp("(https?:\/\/(.+?\.)?(straitstimes|tnp|todayonline|businesstimes|zaobao|beritaharian|channelnewsasia|theindependent)\.(com|sg)(\/*)?)");
 
@@ -17,17 +15,3 @@ module.exports = (link) => {
 
     // Return score
 }
-
-// async function scrape(link) {
-//     let links = [];
-//     await osmosis.get(link)
-//         .find('a')
-//         .set({
-//             'link': '@href'
-//         })
-//         .data((listing) => {
-//             links.push(listing.link);
-//         })
-//         .log(console.log);
-//     return links;
-// }
