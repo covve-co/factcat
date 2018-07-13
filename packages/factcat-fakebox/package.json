@@ -1,0 +1,13 @@
+{
+  "name": "factcat-fakebox",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Ravern Koh",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "osmosis": "^1.1.7"
+  }
+}
