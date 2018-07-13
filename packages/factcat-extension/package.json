@@ -1,0 +1,22 @@
+{
+  "name": "factcat-extension",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js -o dist/bundle.js -t [ babelify ]",
+    "watch": "watchify index.js -o dist/bundle.js -t [ babelify ]"
+  },
+  "author": "Ravern Koh",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.2",
+    "watchify": "^3.11.0"
+  },
+  "dependencies": {
+    "uuid": "^3.3.2"
+  }
+}

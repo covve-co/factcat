@@ -1,0 +1,21 @@
+{
+    "name": "FactCat",
+    "version": "1.0",
+    "description": "The cat that knows it all",
+    "permissions": [],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://facebook.com/*",
+                "https://facebook.com/*",
+                "http://*.facebook.com/*",
+                "https://*.facebook.com/*"
+            ],
+            "js": [
+                "bundle.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "manifest_version": 2
+}
