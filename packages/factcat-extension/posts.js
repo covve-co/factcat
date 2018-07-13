@@ -1,7 +1,7 @@
 const uuid = require('uuid/v4');
 const blubber = require('./blubber');
 
-const POST_SELECTOR = '._5pcr.userContentWrapper';
+const POST_SELECTOR = '.userContentWrapper';
 const LINK_SELECTOR = 'a._52c6';
 
 const THRESHOLD = 0.5;
@@ -43,16 +43,16 @@ function block(post) {
     const root = post.raw.parentNode.parentNode.parentNode;
 
     post.original = root.innerHTML;
-    root.innerHTML = `<div style="display:flex; flex-direction: column; height: 600px; width: 500px; background-color: white; font-family: 'Lato', sans-serif; border-radius: 15px; justify-content: center; align-items: center;" id="${post.id}"><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <img class="cat" src="https://image.ibb.co/njL3bo/cat.png" alt="cat" style="padding-bottom:60px; position: absolute; width: 250px; object-position: center; object-fit: fill;">
+    root.innerHTML = `<div style="display:flex; flex-direction: column; height: 600px; width: 500px; background-color: white; font-family: 'Lato', sans-serif; border-radius: 15px; justify-content: center; align-items: center;margin-bottom: 15px;" id="${post.id}"><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <img class="cat" src="https://image.ibb.co/njL3bo/cat.png" alt="cat" style="padding-bottom:100px; position: absolute; width: 250px; object-position: center; object-fit: fill;">
     <div style="flex: 9;"></div>
-    <div style="flex: 5; width:100%; background-color: #f5f5f5f5; text-align: center; ">
-        <br>
-        <p>Meow!</p>
-        <p>This news may be unreliable!</p>
+    <div style="flex: 5; width:100%; padding-top: 10%; background-color: #f5f5f5f5; text-align: center;">
+        <h1 style="font-size: 20px; font-weight: 700; ">Meow!</h1>
+        <h2>This news may be unreliable!</h2>
     </div>
-    <div style="float: bottom; width:100%; flex: 1; color: white; background-color: #D1D1D1;justify-content: center;">
-        Why is there a fact cat?
+    <div style="float: bottom; width:100%; flex: 1; color: white; background-color: #5BD9BC;">
+        <p style="margin: 10px; font-size:16px; float: left;">Why is there a fact cat?</p> 
+        <p style="margin: 10px; font-size:16px; float: right;">FACTCAT</p> 
     </div></div>`;
 
     blubber.create(post);
