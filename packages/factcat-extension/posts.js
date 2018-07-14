@@ -1,3 +1,4 @@
+const axios = require('axios');
 const uuid = require('uuid/v4');
 
 const POST_SELECTOR = '.userContentWrapper';
@@ -19,10 +20,11 @@ module.exports.modified = function () {
         posts.push(post);
 
         if (post.type == 'link') {
-            process(post);
-            if (post.scores.total < THRESHOLD) {
-                block(post);
-            }
+            process(post, function () {
+                if (post.scores.total < THRESHOLD) {
+                    block(post);
+                }
+            });
         }
     }
 
@@ -31,10 +33,19 @@ module.exports.modified = function () {
 
 // Gets various scores from each attribute and evaluates them. The closer to 0
 // a score is, the more fake it is.
-function process(post) {
-    post.scores = {
-        total: 0
-    };
+function process(post, result) {
+    post.scores = {};
+
+    axios
+        .post('http://localhost:9090/', {
+            link: post.href,
+        })
+        .then(function (response) {
+            post.scores.fakebox = response.data.score;
+            console.log(post.scores.fakebox);
+            // post.scores.total = something...
+            result();
+        })
 }
 
 // Blocks a post.

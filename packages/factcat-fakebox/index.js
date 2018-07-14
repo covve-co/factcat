@@ -2,6 +2,8 @@ const osmosis = require('osmosis');
 const axios = require('axios');
 
 module.exports = function (link, result) {
+    link = unescape(getParameterByName('u', link));
+
     let title = '';
     let content = [];
 
@@ -26,7 +28,18 @@ module.exports = function (link, result) {
         });
 }
 
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
 function submit(data, result) {
+    console.log(data);
     data.content = data.content.slice(1, data.content.length - 2).join(' ');
     axios
         .post('http://localhost:8080/fakebox/check', data)

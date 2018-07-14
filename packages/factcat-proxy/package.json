@@ -1,0 +1,21 @@
+{
+  "name": "factcat-proxy",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Ravern Koh",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "resolve-redirect": "0.0.3",
+    "factcat-fakebox": "0.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.2"
+  }
+}
