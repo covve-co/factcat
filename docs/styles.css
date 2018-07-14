@@ -10,6 +10,11 @@
 body {
     background-color: #FCFCFC;
     font-family: 'Open Sans', sans-serif;
+    animation: fadeIn 1s;
+}
+
+body>div {
+    animation: slideUp 1.3s;
 }
 
 .nav {
@@ -28,6 +33,10 @@ body {
     color: #FF0032;
 }
 
+.nav h3 {
+    color: #1c1c1c;
+}
+
 .gl-cell {
     padding: 0px 10px 0px 10px;
     vertical-align: baseline;
@@ -38,6 +47,23 @@ body {
     left: -40px;
     z-index: 9000;
     width: 200px;
+    bottom: -7%;
+}
+
+.content {
+    padding: 10%;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+
+.card:hover {}
+
+.card>p {
+    color: #1c1c1c;
 }
 
 /* Modifiers */
@@ -46,6 +72,34 @@ body {
     text-align: center;
 }
 
+.highlight {
+    color: #FF0032;
+}
+
 .mark {
     background-color: yellow;
+}
+
+.height-fill {
+    height: 100%;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translate(0, 5vh);
+    }
+    to {
+        transform: translate(0, 0);
+    }
 }
