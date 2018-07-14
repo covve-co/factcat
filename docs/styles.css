@@ -1,0 +1,51 @@
+/*
+    Colors
+    Grey #D1D1D1 
+    Black #1C1C1C
+    Not so white #FCFCFC
+    Turqoise #5BD9BC
+    Red #FF0032
+*/
+
+body {
+    background-color: #FCFCFC;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.nav {
+    background-color: white;
+    height: 50vh;
+    text-align: start;
+    padding-left: 15px;
+}
+
+.nav h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 0px;
+    padding-top: 20px;
+    color: #FF0032;
+}
+
+.gl-cell {
+    padding: 0px 10px 0px 10px;
+    vertical-align: baseline;
+}
+
+#cat {
+    position: absolute;
+    left: -40px;
+    z-index: 9000;
+    width: 200px;
+}
+
+/* Modifiers */
+
+.text-center {
+    text-align: center;
+}
+
+.mark {
+    background-color: yellow;
+}
