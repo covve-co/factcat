@@ -11,6 +11,8 @@ body {
     background-color: #FCFCFC;
     font-family: 'Open Sans', sans-serif;
     animation: fadeIn 1s;
+    font-size: 20px;
+    line-height: 1.8;
 }
 
 body>div {
@@ -65,9 +67,17 @@ body>div {
     color: #1c1c1c;
 }
 
+#logo {
+    width: 200px;
+}
+
 #screenshot {
-    float: right;
-    width: 70%;
+    width: 100%;
+}
+
+.content>p {
+    padding-left: 7%;
+    padding-right: 5%;
 }
 
 /* Modifiers */
