@@ -1,0 +1,105 @@
+/*
+    Colors
+    Grey #D1D1D1 
+    Black #1C1C1C
+    Not so white #FCFCFC
+    Turqoise #5BD9BC
+    Red #FF0032
+*/
+
+body {
+    background-color: #FCFCFC;
+    font-family: 'Open Sans', sans-serif;
+    animation: fadeIn 1s;
+}
+
+body>div {
+    animation: slideUp 1.3s;
+}
+
+.nav {
+    background-color: white;
+    height: 50vh;
+    text-align: start;
+    padding-left: 15px;
+}
+
+.nav h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 0px;
+    padding-top: 20px;
+    color: #FF0032;
+}
+
+.nav h3 {
+    color: #1c1c1c;
+}
+
+.gl-cell {
+    padding: 0px 10px 0px 10px;
+    vertical-align: baseline;
+}
+
+#cat {
+    position: absolute;
+    left: -40px;
+    z-index: 9000;
+    width: 200px;
+    bottom: -7%;
+}
+
+.content {
+    padding: 10%;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+
+.card:hover {}
+
+.card>p {
+    color: #1c1c1c;
+}
+
+/* Modifiers */
+
+.text-center {
+    text-align: center;
+}
+
+.highlight {
+    color: #FF0032;
+}
+
+.mark {
+    background-color: yellow;
+}
+
+.height-fill {
+    height: 100%;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translate(0, 5vh);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
