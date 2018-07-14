@@ -13,8 +13,8 @@ app.use(function (req, res, next) {
 });
 
 app.post('/', (req, res) => {
+    console.log('received request');
     fakebox(req.body.link, function (score) {
-        console.log(score);
         res.json({ score });
     });
 });
