@@ -39,7 +39,6 @@ function getParameterByName(name, url) {
 }
 
 function submit(data, result) {
-    console.log(data);
     data.content = data.content.slice(1, data.content.length - 2).join(' ');
     axios
         .post('http://localhost:8080/fakebox/check', data)
